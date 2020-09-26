@@ -10,6 +10,7 @@ import java.util.List;
 public class Parent {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String sender;
     private String receiver;

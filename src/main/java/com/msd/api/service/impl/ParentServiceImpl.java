@@ -31,7 +31,6 @@ public class ParentServiceImpl implements ParentService {
         return parentRepository.save(parent);
     }
 
-
     @Override
     public List<ParentDto> findParentData(int page, int limit) {
         Pageable pageable = PageRequest.of(page, limit, Sort.by("id"));

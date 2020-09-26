@@ -82,16 +82,4 @@ public class ChildController {
         }
         return new ResponseEntity(HttpStatus.OK) ;
     }
-
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    @ApiOperation(value = "Child data get endpoint",response = Child.class)
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "Content-Type", value = "application/json", paramType = "header"),
-            @ApiImplicitParam(name = "Authorization", value = "Generated access token",
-                    paramType = "header")})
-    public List<Child> getChilds() {
-        return childService.findAll();
-    }
-
 }
